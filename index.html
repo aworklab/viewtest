@@ -1,27 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=“ko”>
 <head>
-  <meta charset="UTF-8">
-  <title>Redirecting...</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset=“UTF-8">
+  <title>Dalcomsoft 공식 링크</title>
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: ‘Segoe UI’, sans-serif;
+      background-color: #FFFFFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    .logo {
+      width: 160px;
+      margin-bottom: 30px;
+    }
+    .message {
+      font-size: 1.3rem;
+      color: #333;
+      margin-bottom: 8px;
+    }
+    .sub {
+      font-size: 0.95rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <img class=“logo” src=“https://superstarstore.net/images/logo_black.png” alt=“Dalcomsoft Logo”>
+  <div class=“message”>Dalcomsoft로 이동 중입니다...</div>
+  <div class=“sub”>사용자의 기기에 맞는 스토어로 안내됩니다</div>
   <script>
     window.onload = function () {
-      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       if (/android/i.test(userAgent)) {
-        // Android 사용자의 경우
-        window.location.href = "https://play.google.com/store/apps/dev?id=4664789775367837521";
+        window.location.href = “https://play.google.com/store/apps/dev?id=4664789775367837521&hl=ko”;
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        // iOS 사용자의 경우
-        window.location.href = "https://apps.apple.com/kr/developer/dalcomsoft-inc/id890937535";
+        window.location.href = “https://apps.apple.com/kr/developer/dalcomsoft-inc/id890937535”;
       } else {
-        // 그 외 (예: 데스크톱)
-        window.location.href = "https://dalcomsoft.com/html/";
+        window.location.href = “https://dalcomsoft.com/html/”;
       }
     };
   </script>
-</head>
-<body>
-  <p>Redirecting you to the appropriate app store...</p>
 </body>
 </html>
