@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    window.onload = function () {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        // Android 사용자의 경우
+        window.location.href = "https://play.google.com/store/apps/dev?id=4664789775367837521";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        // iOS 사용자의 경우
+        window.location.href = "https://apps.apple.com/kr/developer/dalcomsoft-inc/id890937535";
+      } else {
+        // 그 외 (예: 데스크톱)
+        window.location.href = "https://dalcomsoft.com/html/";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting you to the appropriate app store...</p>
+</body>
+</html>
